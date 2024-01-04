@@ -9,7 +9,7 @@ let valueInNumber = Number(score);
 // Conversion Of Different Datatypes to Number:
 // 33 => 33;
 // "" => 0
-// "Something" => NaN(NaN(Not a Number) has its datatype as number);
+// "Something" => NaN(NaN(Not a Number) has its datatype as number since we typecasted it to number but by default NaN is an Object and also remember that we can typecast NaN to any datatype)...
 // null => 0
 // undefined => NaN
 // true => 1; false => 0
@@ -38,3 +38,38 @@ let stringSomeNumber = String(someNumber);
 // null => "null"
 // undefined => "undefined"
 // true => "true"; false => "false"
+
+// #####################  OPERATIONS ######################
+let value = 3;
+let negValue = -value;
+// console.log(negValue);
+
+// console.log(2+2);
+// console.log(2-2);
+// console.log(2*2);
+// console.log(2/2);
+// console.log(2%2);
+// console.log(2**3);  // 2 raised to the power 3.
+
+let str1 = "Hello";
+let str2 = " Bikash";
+let str3 = str1 + str2;
+// console.log(str3);
+
+// console.log("1" + 2); // ==>12
+// console.log(1 + "2"); // ==> 12;
+// console.log("1" + "2"); // ==> 12;
+// console.log("1" + 2 + 2); // ==> 122;
+// console.log(1 + 2 + "2"); // ==> 32; //ECMA Script is behind all this
+
+// console.log(true); // ==> true;
+// console.log(+true);  // ==> 1;
+// console.log(+"");   //  ==> 0;
+
+// let gameCounter=99;
+// console.log(gameCounter++);  // ==> 99
+// console.log(gameCounter);   // ==> 100
+
+
+let gameCounter=99;
+console.log(++gameCounter);  // ==> 100;
