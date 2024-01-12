@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #212121;
+  color: #fff;
+  font-size: larger;
+}
+
+#takeText {
+  margin: 1rem;
+  height: 2.5em;
+  width: 20rem;
+  border: 2px solid grey;
+  border-radius: 6em;
+  background-color: burlywood;
+  text-align: center;
+  font-size: large;
+}
+#takeText::placeholder {
+  color: black;
+}
+#button {
+  display: inline-block;
+  width: 7rem;
+  height: 2rem;
+  color: #fff;
+  border: 2px solid gray;
+  border-radius: 6em;
+  background-color: rgb(95, 32, 32);
+}
+#button:hover {
+  background-color: darkred;
+  cursor: pointer;
+}

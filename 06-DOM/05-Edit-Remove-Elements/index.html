@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit And Remove</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>The Languages Are:</p>
+    <ul class="language">
+      <li>JavaScript</li>
+    </ul>
+    <input id="takeText" type="text" placeholder="Language Here Please!" />
+    <button
+      id="button"
+      onclick="addLiEle(document.querySelector('#takeText').value)"
+    >
+      Click To Add
+    </button>
+    <script src="script.js"></script>
+  </body>
+</html>
