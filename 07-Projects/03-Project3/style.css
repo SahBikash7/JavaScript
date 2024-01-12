@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #212121;
+  font-family: "Anton", sans-serif;
+  font-family: "DM Serif Display", serif;
+  color: #fff;
+}
+#content {
+  box-sizing: border-box;
+  width: 20vw;
+  height: 20vh;
+  margin: 40vh 40vw;
+}
+#text {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#clock {
+  height: 50%;
+  text-align: center;
+  font-size: 2em;
+}
