@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <p>
+      Pahila we used to use XMLHttpRequest for interaction with other-parties.
+    </p>
+    <div>
+      <p>
+        XMLHttpRequest API enables web apps to make HTTP requests to web servers
+        and receive the responses programmatically using JavaScript. This in
+        turn enables a website to update just part of a page with data from the
+        server, rather than having to navigate to a whole new page. This
+        practice is also sometimes known as Ajax. The Fetch API is the more
+        flexible and powerful replacement for the XMLHttpRequest API. The Fetch
+        API uses promises instead of events to handle asynchronous responses,
+        integrates well with service workers, and supports advanced aspects of
+        HTTP such as CORS. For these reasons, the Fetch API is usually used in
+        modern web apps instead of XMLHttpRequest.
+      </p>
+    </div>
+    <div>
+      <p>
+        XMLHttpRequest (XHR) objects are used to interact with servers. You can
+        retrieve data from a URL without having to do a full page refresh. This
+        enables a Web page to update just part of a page without disrupting what
+        the user is doing. EventTarget XMLHttpRequestEventTarget XMLHttpRequest
+        Despite its name, XMLHttpRequest can be used to retrieve any type of
+        data, not just XML. If your communication needs to involve receiving
+        event data or message data from a server, consider using server-sent
+        events through the EventSource interface. For full-duplex communication,
+        WebSockets may be a better choice.
+      </p>
+    </div>
+    <div>
+      <pre>
+        The XMLHttpRequest.readyState property returns the state an XMLHttpRequest client is in. An XHR client exists in one of the following states:
+
+       Value	    State	              Description
+        0	    UNSENT	            Client has been created. open() not called yet.
+        1	    OPENED	            open() has been called.
+        2	    HEADERS_RECEIVED	  send() has been called, and headers and status are available.
+        3	    LOADING	            Downloading; responseText holds partial data.
+        4	    DONE	            The operation is complete.
+      </pre>
+    </div>
+
+    <script>
+      // XML sends the request which is known as AJAX request , for this we do:
+      const xhr = new XMLHttpRequest(); // xhr is an object of XMLHttpRequest()
+      const requestUrl = "https://api.github.com/users/SahBikash7";
+      xhr.open("GET", requestUrl);
+
+      //   To continuosly track the state we use:
+      xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+          const data = JSON.parse(this.responseText);
+          console.log(data);
+          // console.log(typeof data); // => String beacuse in most of the cases when the data is retrived from any url,it comes in string.So, we need to convert it to JSON Object
+          console.log(data.followers);
+          console.log(data.login);
+        }
+      };
+
+      //   The open doesn't get called itself because we might need to add more properties after open.
+      //  Once sure that no extras needed to add then we use .send()
+      xhr.send();
+
+      // The v8 engine is written in C++. The console.log() which we do actually isn't the part of JS itself , the C++ code gives the browser a separate debugging environment which is our console.
+    </script>
+  </body>
+</html>
