@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #212121;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#content {
+  height: 100vh;
+}
+#insert {
+  margin: 5em 5em 0em 5em;
+}
+p {
+  margin-top: 1em;
+  text-align: center;
+}
+table,
+th,
+td {
+  border: 1px solid darkred;
+  background-color: black;
+  text-align: center;
+}
