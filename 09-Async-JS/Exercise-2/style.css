@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #212121;
+  color: #fff;
+}
+div {
+  margin: 4vh 35vw;
+}
+button {
+  width: 10vw;
+  height: 7vh;
+  background-color: aqua;
+  border-radius: 2rem;
+}
+button:hover {
+  cursor: pointer;
+  background-color: blueviolet;
+}
